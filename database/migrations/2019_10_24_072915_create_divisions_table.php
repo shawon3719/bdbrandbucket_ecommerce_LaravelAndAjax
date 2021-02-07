@@ -18,7 +18,6 @@ class CreateDivisionsTable extends Migration
             $table->string('name');
             $table->unsignedTinyInteger('priority')->default(1);
             $table->timestamps();
-
             $table->foreign('division_id')
                 ->references('id')->on('divisions')
                 ->onDelete('cascade');
